@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𓇻♫𝓢𝓐𝓛𝓞𝓟𝓨-𝓟𝓐𝓡𝓚𓇻♫</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="portfolio.html">WORKS</a></li>
+                <li><a href="contact.html">INFO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="main-visual">
+            <img src="images/main-visual.png" alt="主视觉图片">
+        </div>
+    </section>
+
+            <section id="portfolio">
+                <img src="images/portfolio-title.jpg" alt="作品集">
+                
+                <!-- 新增六个项目，带有手动点击的图片集 -->
+                <div class="project-list">
+                    <div class="project">
+                        <div class="image-slider-container">
+                            <div class="image-slider">
+                                <img src="images/project1-img1.jpg" alt="Project 1 Image 1">
+                                <img src="images/project1-img2.jpg" alt="Project 1 Image 2">
+                                <img src="images/project1-img3.jpg" alt="Project 1 Image 3">
+                            </div>
+                            <div class="slider-controls">
+                                <span class="prev" onclick="slidePrev(this)">&lt;</span>
+                                <span class="next" onclick="slideNext(this)">&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="image-slider-container">
+                            <div class="image-slider">
+                                <img src="images/project2-img1.jpg" alt="Project 2 Image 1">
+                                <img src="images/project2-img2.jpg" alt="Project 2 Image 2">
+                                <img src="images/project2-img3.jpg" alt="Project 2 Image 3">
+                            </div>
+                            <div class="slider-controls">
+                                <span class="prev" onclick="slidePrev(this)">&lt;</span>
+                                <span class="next" onclick="slideNext(this)">&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="image-slider-container">
+                            <div class="image-slider">
+                                <img src="images/project3-img1.jpg" alt="Project 3 Image 1">
+                                <img src="images/project3-img2.jpg" alt="Project 3 Image 2">
+                                <img src="images/project3-img3.jpg" alt="Project 3 Image 3">
+                            </div>
+                            <div class="slider-controls">
+                                <span class="prev" onclick="slidePrev(this)">&lt;</span>
+                                <span class="next" onclick="slideNext(this)">&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 添加更多项目 -->
+                </div>
+            </section>
+
+<footer>
+    <p>&copy; 2024 你的名字. 版权所有.</p>
+</footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

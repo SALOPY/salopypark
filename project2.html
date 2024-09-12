@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝓒𝓞𝓜𝓔 𝓐𝓝𝓓 𝓢𝓗𝓞𝓟!</title>
+    <link rel="stylesheet" href="styles-project2.css">
+    <style>
+        /* 定义鼠标悬停时的放大镜光标样式 */
+        .project-images a:hover, .image-row a:hover {
+            cursor: zoom-in; /* 使用系统默认的放大镜光标 */
+        }
+        .image-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px; /* 图片组之间的间距 */
+        }
+
+        .image-column {
+            flex: 0 0 49.5%; /* 每列占据容器宽度的48% */
+            margin-bottom: 0.5vw; /* 图片与文字注释之间的间距 */
+        }
+
+        .image-column img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-caption {
+            text-align: center;
+            margin-top: 1vw;
+            font-size: 1.5vw;
+            color: #ffffff;
+        }
+ 
+    </style>
+</head>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="portfolio.html">WORKS</a></li>
+                <li><a href="info.html">INFO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project-detail">
+        <!-- 居中的大标题 -->
+        <h1 class="project-title">COME AND SHOP!</h1>
+
+        <!-- 项目介绍 -->
+        <div class="project-description">
+            <div class="flower">
+                <p1>¥[2023]¥</p1>
+            </div>
+            <div class="flower">
+                <p1>¥ Digital Game-Graphic Design ¥</p1>
+            </div>
+            <div class="flower">
+                <p1>♥ TUTOR:SUZY CHAN ♥</p1>
+            </div>
+            <div class="flower">
+                <p1>¥</p1>
+            </div>
+            <div class="left-column">
+                <p>拼多多作为中国近年来新兴的电商平台，在快速的发展之下，将曾经的盗版潮又一次带回电商平台。这些贩卖假货的商家通常会通过一系列的信息差方式并配以低廉的价格来吸引消费者购买产品，视觉信息差便是其中最主要的方式之一。这种无良的行为深深的侵犯了我们作为消费者的合法权益，我们在无意间购买到假货产品，且很多时候也只能自认倒霉，商家却能够获得巨大的经济收益。该项目通过设计一个简易的网页互动游戏，让观者在游戏中了解到山寨商家是如何通过视觉信息差来欺骗消费者的，同时呼吁大家抵制购买山寨产品，合法的维护自己的消费者权益。</p>
+            </div>
+            <div class="flower">
+                <p1>¥</p1>
+            </div>
+            <div class="right-column">
+                <p>As an emerging e-commerce platform in China in recent years, Pinduoduo has brought the piracy fervour back to the e-commerce platform once again with its rapid development. These sellers of fake goods usually attract consumers through low prices and information gaps. Visual information gaps are one of their most important tricks. This unscrupulous behaviour deeply infringes the legitimate rights and interests of consumers. Consumers inadvertently buy fake products, and often can only have themselves to blame, while the sellers can get huge economic benefits.By designing a simple webpage interactive game, the viewers can understand how the knock-off sellers deceive consumers through visual information gaps. At the same time, this project calls on everyone to resist purchasing knock-offs, and learn to legally protect their rights and interests as consumers.</p>
+            </div>
+        </div>
+
+<!-- 视频区域 -->
+<div class="video-container">
+    <video width="100%" controls>
+        <source src="videos/project2-video.mp4" type="video/mp4">
+        您的浏览器不支持 HTML5 视频标签。
+    </video>
+</div>
+
+<!-- 图片区域 -->
+<div class="project-images">
+    <a href="images/project2/projec2detail-img1.jpg" class="lightbox" data-index="0">
+        <img src="images/project2/project2-detail-img1.jpg" alt="Project 2 Detail Image 1">
+    </a>
+    <p class="image-caption">Screenshoot 1</p>
+    <a href="images/project2/project2-detail-img2.jpg" class="lightbox" data-index="0">
+        <img src="images/project2/project2-detail-img2.jpg" alt="Project 2 Detail Image 2">
+    </a>
+    <p class="image-caption">Screenshoot 2</p>
+    <a href="images/project2/project2-detail-img3.jpg" class="lightbox" data-index="1">
+        <img src="images/project2/project2-detail-img3.jpg" alt="Project 2 Detail Image 3">
+    </a>
+    <p class="image-caption">Screenshoot 3</p>
+    <a href="images/project2/project2-detail-img4.jpg" class="lightbox" data-index="2">
+        <img src="images/project2/project2-detail-img4.jpg" alt="Project 2 Detail Image 4">
+    </a>
+    <p class="image-caption">Screenshoot 4</p>
+    <a href="images/project2/project2-detail-img5.jpg" class="lightbox" data-index="2">
+        <img src="images/project2/project2-detail-img5.jpg" alt="Project 2 Detail Image 5">
+    </a>
+    <p class="image-caption">Screenshoot 5</p>
+    <a href="images/project2/project2-detail-img6.jpg" class="lightbox" data-index="2">
+        <img src="images/project2/project2-detail-img6.jpg" alt="Project 2 Detail Image 6">
+    </a>
+    <p class="image-caption">Screenshoot 6</p>
+    <a href="images/project2/project2-detail-img7.jpg" class="lightbox" data-index="2">
+        <img src="images/project2/project2-detail-img7.jpg" alt="Project 2 Detail Image 7">
+    </a>
+    <p class="image-caption">Screenshoot 7</p>
+</div>
+ </section>
+
+    <footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

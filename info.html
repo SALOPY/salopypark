@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝓘𝓝𝓕𝓞𝓡𝓜𝓐𝓣𝓘𝓞𝓝 𝓑𝓞𝓐𝓡𝓓</title>
+    <link rel="stylesheet" href="stylesinfo.css">
+    <style>
+        .draggable {
+            position: absolute;
+            cursor: grab;
+        }
+        .restricted-area {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 600px;
+            height: 400px;
+            border: 2px dashed #00f; /* 添加边框以可视化活动范围 */
+            overflow: hidden;
+        }
+        .column-item {
+         display: inline-block; /* 让每个 span 元素并排显示 */
+         width: 100%; /* 每个项目占据50%的宽度，形成两列 */
+         text-align: left; /* 文字靠左对齐 */
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="portfolio.html">WORKS</a></li>
+                <li><a href="info.html">INFO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="personal-info">
+        <div class="info-container">
+            <div class="info-photo">
+                <img src="images/salopy1.gif" alt="你的个人照片">
+            </div>
+            <div class="info-text">
+                <h2>HI! WELCOME TO SALOPY PARK!</h2>    
+                <h2>★I AM:JILONG ZHONG(KAM)★</h2>
+                <p> Currently running this special DIGITAL PARK^^ ♥♥
+                    A visual researcher and keen social observer, I bring four years of experience 
+                    in visual learning, coupled with a mastery of sophisticated visual presentation 
+                    skills. My professional journey includes extensive collaboration and literature 
+                    research.</p>
+                <h2>★EDUCATION★</h2>
+                <p>
+                    <span class="column-item">2019-2023 CHINA ACADEMY of ART</span>
+                    <span class="column-item">VISUAL COMMUNICATION DESIGN</span>
+                </p>  
+                <p>
+                    <span class="column-item">2024-NOW UAL-CAMBERWELL COLLAGE OF ART</span>
+                    <span class="column-item">GRAPHIC DESIGN COMMUNICATION</span>
+                </p>   
+                <p><a href="https://www.instagram.com/salopy_park/" target="_blank">Instagram</a></p>
+                <p><a href="mailto:kam1105salopy@gmail.com">Email</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="personal-experience">
+        <div class="experience-container">
+            <h2>☘︎☘︎☘︎ AWARDS ☘︎☘︎☘︎</h2>
+            <p1>ღ Some of the awarded projects are collaborated with my classmates&teammates,much thanks to them ღ </p1>
+             
+            <h2>𝜗𝜚 2023 𝜗𝜚</h2>
+            <p>● China Academy of Art, Graduation Project, Gold Prize</p> 
+
+            <p>● China Academy of Art, Lin Fengmian Scholarship, Gold Prize</p> 
+
+            <p>● Design 360 Graduate360° 2023, Awarded</p> 
+
+            <p>● GDC Award 2023 Book Design Category, Excellence Award</p>
+
+            <p>● GDC Award 2023,Information Visualization Category, Silver Prize</p>
+               
+            <p>● NewOne Awards 2023,Book Design Category,Merit Award</p>
+
+            <p>● KTK Design Award, Book Design Category,Finalist</p>
+
+            <p>● CGDA Award 2023, Multimedia Category, Excellence Award</p>
+
+            <h2>𝜗𝜚 2022 𝜗𝜚</h2>
+                
+            <p>● The 23th Platinum Originality International University Students Graphic Design Competition, Silver Prize</p>
+
+            <p>● The 13th "Challenge Cup" Student Entrepreneurial Plan Competition in Zhejiang Province, Bronze Prize</p>
+            
+            <p>● HONOR Talents Global Design Awards AR Interactive Artwork Design, 2nd Place</p>
+            
+            <h2>𝜗𝜚 2021 𝜗𝜚</h2>
+            
+            <p>● BICC Sino-British International Creative Competition, Bronze Award</p>
+            
+            <p>● "G cross" Hangzhou City Digital Branding Theme Design Team Competition, Bronze Prize</p>
+            
+            <p>● The 9th National Student Advertising Creative Design Competition, Excellence Award</p> 
+            
+            <p>● The 6th International Environmental Protection Public Welfare Design Competition, Group Bronze Award</p> 
+        </div>
+    </section>
+
+    <section id="welcome">
+        <div class="welcome-container">
+                <h2>εïз Hoping u have fun in SALOPY PARK! ^^ εïз</h2>
+                <p>*･゜ﾟ･*:.｡..｡.:*･'(*ﾟ▽ﾟ*)'･*:.｡. .｡.:*･゜ﾟ･*</p>
+        </div>
+    </section>
+
+    <footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 五张主视觉图片路径
+            const images = [
+                'images/main-visual1.png',
+                'images/main-visual2.png',
+                'images/main-visual3.png',
+                'images/main-visual4.png',
+                'images/main-visual5.png',
+            ];
+    
+            // 随机选择一张图片作为主视觉
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const selectedImage = images[randomIndex];
+    
+            // 将选中的图片插入到主视觉容器中，并设置为链接
+            const mainVisual = document.getElementById('main-visual');
+            mainVisual.innerHTML = `<a href="portfolio.html"><img src="${selectedImage}" alt="主视觉图片"></a>`;
+    
+            // 添加随机分布的 GIF
+            const gifs = [
+                'images/butterfly.gif',
+                'images/star.gif',
+                'images/butterfly.gif',
+            ];
+    
+            const gifCount = 3; // 生成 3 个随机 GIF
+            const usedPositions = []; // 存储已经使用的随机位置
+            const buffer = 10; // 缓冲区，避免太靠近
+    
+            function getRandomPosition() {
+                let randomTop, randomLeft;
+                let isValid = false;
+    
+                while (!isValid) {
+                    // 随机生成位置
+                    randomTop = Math.random() * 100; // 页面高度的百分比 (0-100%)
+                    randomLeft = Math.random() * 100; // 页面宽度的百分比 (0-100%)
+    
+                    // 检查是否在中间70%的区域
+                    const isOutsideCenter = (
+                        (randomTop < 10 || randomTop > 90) || // 上下15%的区域
+                        (randomLeft < 10 || randomLeft > 90)   // 左右15%的区域
+                    );
+    
+                    // 如果在四周区域内，并且位置未重叠，则位置有效
+                    if (isOutsideCenter) {
+                        isValid = usedPositions.every(pos => {
+                            return Math.abs(randomTop - pos.top) > buffer && Math.abs(randomLeft - pos.left) > buffer;
+                        });
+    
+                        // 如果位置有效，则保存
+                        if (isValid) {
+                            usedPositions.push({ top: randomTop, left: randomLeft });
+                        }
+                    }
+                }
+    
+                return { top: randomTop, left: randomLeft };
+            }
+    
+            for (let i = 0; i < gifCount; i++) {
+                const gif = document.createElement('img');
+                gif.src = gifs[Math.floor(Math.random() * gifs.length)];
+                gif.classList.add('random-gif');
+    
+                // 生成随机位置并避免重叠
+                const { top, left } = getRandomPosition();
+                gif.style.top = top + 'vh';
+                gif.style.left = left + 'vw';
+    
+                // 将 GIF 插入到主视觉区域
+                mainVisual.appendChild(gif);
+            }
+        });
+    </script>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💧𝓢𝓐𝓓-𝓖𝓐𝓛𝓛𝓔𝓡𝓨💧</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        .portfolio-container {
+            display: flex;
+            width: 100%;
+            margin-top: 5vw; /* 使内容与导航栏之间留出空间 */
+        }
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1vw; /* 每个项目之间的间距 */
+            width: 100%;
+        }
+        .project {
+            display: flex;
+            width: 100%;
+        }
+        .image-container {
+            flex-basis: 70%; /* 图片部分占80% */
+            display: flex;
+            align-items: flex-start; /* 确保图片从上方对齐 */
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-container {
+            flex-basis: 30%; /* 文本部分占20% */
+            padding-left: 1vw;
+            color: #ffffff; /* 修改文本颜色 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* 标题和描述分别对齐到顶部和底部 */ /* 确保文本从左侧对齐 */
+        }
+        .text-container h2 {
+            font-size: 2vw;
+            color: white;
+            text-align: right;
+            align-items: flex-start;
+            margin: 0;
+            font-weight: 600;
+        }
+        .text-container p {
+            font-size: 1.5vw;
+            color: #d4d4d4;
+            text-align: left; 
+            align-self: flex-start; /* 使文本与图片底部对齐 */
+            font-weight: 400;
+        }
+
+        .fade-in-image {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in-image.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .column-item {
+         display: inline-block; /* 让每个 span 元素并排显示 */
+         width: 100%; /* 每个项目占据50%的宽度，形成两列 */
+         text-align: right; /* 文字靠左对齐 */
+         }
+
+
+    
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="portfolio.html">WORKS</a></li>
+                <li><a href="info.html">INFO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="portfolio-container">
+        <!-- 项目列表 -->
+    <section class="portfolio-container">
+        <div class="project-list">
+            <div class="project">
+                <div class="image-container fade-in-image">
+                    <a href="project1.html"><img src="images/project1.jpg" alt="Project 1 Image"></a>
+                </div>
+                <div class="text-container">
+                    <h2>☆ CHEER UP! ATHLETES. ☆</h2>
+                    <p>
+                        <span class="column-item">● INTERACTIVE INSTALLATION</span>
+                        <span class="column-item">● GRAPHIC DESIGN</span>
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="image-container fade-in-image">
+                    <a href="project2.html"><img src="images/project2.jpg" alt="Project 2 Image"></a>
+                </div>
+                <div class="text-container">
+                    <h2>☆ COME AND SHOP! ☆</h2>
+                    <p>
+                        <span class="column-item">● DIGITAL GAME</span>
+                        <span class="column-item">● GRAPHIC DESIGN</span>
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="image-container fade-in-image">
+                    <a href="project3.html"><img src="images/project3.jpg" alt="Project 3 Image"></a>
+                </div>
+                <div class="text-container">
+                    <h2>☆ MUST KNOW BEFORE BUYING A HOUSE ☆</h2>
+                    <p>
+                        <span class="column-item">● INSTALLATION</span>
+                        <span class="column-item">● VIRTUAL REALITY</span>
+                        <span class="column-item">● GRAPHIC DESIGN</span>
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="image-container fade-in-image">
+                    <a href="project4.html"><img src="images/project4.jpg" alt="Project 4 Image"></a>
+                </div>
+                <div class="text-container">
+                    <h2>☆ SPEAK BY HANDS ☆</h2>
+                    <p>
+                        <span class="column-item">● FONT DESIGN</span>
+                        <span class="column-item">● BOOK DESIGN</span>
+                        <span class="column-item">● INTERACTION</span>
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="image-container fade-in-image">
+                    <a href="project6.html"><img src="images/project6.jpg" alt="Project 6 Image"></a>
+                </div>
+                <div class="text-container">
+                    <h2>☆ RECORDS OF HAPPY MEMORIES ☆</h2>
+                    <p>
+                        <span class="column-item">● BOOK DESIGN</span>
+                        <span class="column-item">● EDITORIAL</span>
+                        <span class="column-item">● INFORMATION DESIGN</span>
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="image-container fade-in-image">
+                    <a href="project5.html"><img src="images/project5.jpg" alt="Project 5 Image"></a>
+                </div>
+                <div class="text-container">
+                    <h2>☆ STANDARAD ANSWER ☆</h2>
+                    <p>
+                        <span class="column-item">● PERFORMANCE</span>
+                        <span class="column-item">● PRODUCT DESIGN</span>
+                        <span class="column-item">● GRAPHIC DESIGN</span>
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="image-container fade-in-image">
+                    <a href="project7.html"><img src="images/project7.gif" alt="Project 7 GIF"></a>
+                </div>
+                <div class="text-container">
+                    <h2>☆ PATEERN DEIGN FOR HOWSS STUDIO ☆</h2>
+                    <p>
+                        <span class="column-item">● MOTION DESIGN</span>
+                        <span class="column-item">● GRAPHIC DESIGN</span>
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="image-container fade-in-image">
+                    <a href="project8.html"><img src="images/project8.gif" alt="Project 8 jpg"></a>
+                </div>
+                <div class="text-container">
+                    <h2>☆ Other Works before 2023 ☆</h2>
+                    <p>
+                        <span class="column-item">● VARIOUS MEDIUMS</span>
+                        <span class="column-item">● GRAPHIC DESIGN</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <script>
+            const images = document.querySelectorAll('.fade-in-image');
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            });
+    
+            images.forEach(image => {
+                observer.observe(image);
+            });
+        </script>
+</body>
+</html>

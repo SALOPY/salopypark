@@ -1,0 +1,495 @@
+body {
+    font-family: ABC Maxi Round Unlicensed Trial;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/backgroundportfolio.jpg'); /* 背景图片 */
+    background-size: cover; /* 背景图片覆盖整个页面 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+    background-attachment: fixed; /* 使背景图片固定不动 */
+    background-position: center; /* 背景图片居中 */
+}
+
+header {
+    position: fixed; /* 固定在页面顶部 */
+    top: 0; /* 距离顶部为0 */
+    left: 0; /* 距离左侧为0 */
+    right: 0; /* 距离右侧为0 */
+    background-color: transparent;
+    color: rgb(238, 255, 0);
+    padding: 1em 0;
+    text-align: center;
+    z-index: 2; /* 确保导航栏在其他内容之上 */
+}
+
+.project-title, .project-description {
+    z-index: 2; /* 标题和描述的层级 */
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0pt;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+}
+
+nav ul li {
+    margin: 0 15vw; /* 左右间距 */
+}
+
+nav ul li a {
+    color: rgb(192, 192, 192);
+    text-decoration: none;
+    font-size: 2.5vw; /* 使用视口宽度单位，字体大小随着窗口大小变化 */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 5vw;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1em 3em;
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+    font-size: 2.5vw;
+    background-image: url('images/nav-bg.png'); /* 设置底图路径 */
+    background-size: contain; /* 确保图片按比例缩放 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    background-position: center; /* 使图片在块内居中 */
+}
+
+section {
+    background: trans;
+    padding: 2em;
+    text-align: center;
+    font-size: 2em;
+}
+
+.main-visual {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.main-visual img {
+    width: 100%;
+    height: auto;
+}
+
+#portfolio .gallery img {
+    width: 30%;
+    max-width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+section {
+    padding: 2em;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 10px;
+    margin: 1em;
+}
+
+section {
+    padding: 0em;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 1em;
+}
+
+.project-list {
+    padding: 0em;
+    margin: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.project {
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-slider-container {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden; /* 确保内容不会溢出容器 */
+}
+
+.image-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300%; /* 确保容器宽度为三张图片的总和 */
+    height: auto;
+}
+
+.image-slider img {
+    width: 100%; /* 每张图片占据父容器的100%宽度 */
+    height: auto; /* 维持图片的高度比例 */
+    object-fit: contain; /* 确保图片在容器内完整显示 */
+    display: block;
+    flex-shrink: 0; /* 防止图片缩小 */
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-controls span {
+    background-color: transparent;
+    color: gray;
+    padding: 2vw 1vw; /* 使箭头按钮的尺寸相对于视口宽度变化 */
+    cursor: pointer;
+    border-radius: 50%; /* 调整圆角 */
+    user-select: auto;
+    font-size: 2vw; /* 使用视口宽度单位调整箭头符号的大小 */
+}
+
+@media (max-width: 	1284px) {
+    .image-slider-container {
+        height: 40vw; /* 在小屏幕上稍微减小容器高度 */
+        width: 70vw;
+    }
+    .slider-controls span {
+        font-size: 3vw; /* 调整箭头大小以适应小屏幕 */
+    }
+}
+
+
+.project-images img {
+    position: relative;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-bottom: 1em; /* 图片之间的间距 */
+}
+
+/* 项目描述区域的整体样式 */
+.project-description {
+    display: block;
+    justify-content: space-between; /* 保持两栏之间的距离 */
+    padding: 0em;
+    gap: 5em; /* 增加两栏之间的间距 */
+}
+
+/* 项目标题样式 */
+.project-title {
+    position: absolute;
+    top: 10%; /* 视口高度的10%位置 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 水平偏移，使其居中 */
+    font-size: 5vw; /* 字体大小根据视口宽度变化 */
+    text-align: center;
+    color: rgb(238, 255, 0);
+}
+
+/* 固定项目描述的位置 */
+.project-description {
+    position: absolute;
+    top: 30%; /* 视口高度的30%位置 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 水平偏移，使其居中 */
+    width: 60%; /* 设定描述区域的宽度 */
+    font-size: 2.5vw; /* 字体大小根据视口宽度变化 */
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* 调整项目描述的两栏布局 */
+.project-description .left-column, .project-description .right-column {
+    width: 48%; /* 各占据48%的宽度，留出4%的间距 */
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+/* 根据页面高度调节字体大小 */
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 7vw; /* 当视口较小时，增大字体 */
+    }
+    .project-description {
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-title {
+        font-size: 3vw; /* 当视口较大时，减小字体 */
+    }
+    .project-description {
+        font-size: 2vw;
+    }
+}
+
+/* 单张全屏图片样式 */
+.project-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5em; /* 图片之间的间距 */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+.info-container {
+    display: flex;
+    grid-template-columns: 1fr 3fr; /* Image occupies 1 column, text occupies 2 columns */
+    gap: 1em; /* Space between columns */
+    align-items: center; /* Vertically align the content */
+    margin-top: 3em;
+    color: #ffffff;
+}
+
+.info-text {
+    grid-column: 2 / 3; /* Text spans the remaining two columns */
+}
+
+.info-container a {
+    display: block;
+    margin-top: 8pt;
+    color: #fffb00;
+    text-decoration: none;
+}
+
+.info-container a:hover {
+    text-decoration: underline;
+}
+
+.info-text {
+    flex: 1;
+    text-align: left;
+}
+
+.info-text h2 {
+    font-size: 5vw;
+    margin-bottom: 12pt;
+}
+
+.info-text p {
+    font-size: 2vw;
+    margin: 0 0;
+}
+
+@media (max-width: 800px) {
+    .info-text h2 {
+        font-size: 6vw; /* 当视口较小时，增大字体 */
+    }
+    .info-text p {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .info-text h2 {
+        font-size: 3vw; /* 当视口较大时，减小字体 */
+    }
+    .info-text p {
+        font-size: 2vw;
+    }
+}
+
+.info-photo {
+    flex: 1;
+    text-align: left;
+}
+
+.info-photo img {
+    max-width: 150%;
+    min-width: 150%;
+    border-radius: 0;
+    border: 0 solid;
+    height: auto;
+    display: absolute;
+    padding: 0em;
+    margin-left: 0em;
+    margin-right: 1vw;
+    margin-top: 1em;
+}
+
+.experience-container {
+    padding: 2em;
+    background-color: transparent;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.experience-container h2 {
+    margin-bottom: 0.5em;
+    font-size: 5vw;
+    color:#fffb00;
+}
+
+.experience-container p {
+    text-align: left;
+    font-size: 2vw;
+}
+
+.experience-container p {
+    text-align: center;
+    font-size: 2vw;
+}
+
+@media (max-width: 768px) {
+    .experience-container h2 {
+        font-size: 6vw; /* 当视口较小时，增大字体 */
+    }
+    .experience-container p {
+        font-size: 3vw;
+    }
+    .experience-container p1 {
+        font-size: 3vw;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .experience-container h2 {
+        font-size: 3vw; /* 当视口较大时，减小字体 */
+    }
+    .experience-container p {
+        font-size: 2vw;
+    }
+    .experience-container p {
+        font-size: 2vw;
+    }
+}
+
+.welcome-container {
+    padding: 2em;
+    background-color: transparent;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.welcome-container h2 {
+    margin-bottom: 1em;
+    font-size: 5vw;
+    margin-bottom: 1em;
+    color:#ffffff;
+}
+
+@media (max-width: 768px) {
+    .welcome-container h2 {
+        font-size: 6vw; /* 当视口较小时，增大字体 */
+    }
+    .welcome-container p {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .welcome-container h2 {
+        font-size: 3vw; /* 当视口较大时，减小字体 */
+    }
+    .welcome-container p {
+        font-size: 2vw;
+    }
+}
+
+.draggable-container {
+    position: absolute; /* 允许图片自由移动 */
+    top: 0;
+    left: 0;
+    width: 10%; /* 调整为相对页面宽度的百分比 */
+    height: 10%; /* 调整为相对页面高度的百分比 */
+    pointer-events: none; /* 防止拖动容器本身时干扰其他元素 */
+}
+
+.draggable {
+    position: absolute; /* 确保图片可以自由定位 */
+    cursor: move; /* 更改鼠标指针为拖拽手型 */
+    width: 20%; /* 确保图片填满容器 */
+    height: auto; /* 保持图片的原始高度比例 */
+}
+
+
+@media (max-width: 768px) {
+    .draggable-container {
+        width: 2vw; /* 在小屏幕上稍微增大容器的尺寸 */
+        height: 2vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .draggable-container {
+        width: 1vw; /* 在大屏幕上缩小容器的尺寸 */
+        height: 1vw;
+    }
+}
+
+
+footer {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 0em 0;
+    position: fixed;
+    width: 0;
+    bottom: 0;
+}

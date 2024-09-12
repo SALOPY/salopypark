@@ -1,0 +1,180 @@
+body {
+    font-family: ABC Maxi Round Unlicensed Trial;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* 背景图片 */
+    background-size: cover; /* 背景图片覆盖整个页面 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+    background-attachment: fixed; /* 使背景图片固定不动 */
+    background-position: center; /* 背景图片居中 */
+}
+
+header {
+    position: fixed; /* 固定在页面顶部 */
+    top: 0; /* 距离顶部为0 */
+    left: 0; /* 距离左侧为0 */
+    right: 0; /* 距离右侧为0 */
+    color: rgb(238, 255, 0);
+    padding: 1em 0;
+    text-align: center;
+    z-index: 2; /* 确保导航栏在其他内容之上 */
+}
+
+#random-gifs {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 高度设置为页面的 100% */
+    z-index: 0; /* 确保在文字之下 */
+}
+
+#random-gifs img {
+    position: absolute;
+    width: 100px; /* 根据需要调整 GIF 尺寸 */
+    height: auto;
+    z-index: -1; /* 确保 GIF 不遮挡文字 */
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0pt;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+}
+
+nav ul li {
+    margin: 0 15vw; /* 左右间距 */
+}
+
+nav ul li a {
+    color: rgb(192, 192, 192);
+    text-decoration: none;
+    font-size: 2.5vw; /* 使用视口宽度单位，字体大小随着窗口大小变化 */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 5vw;
+    position: relative;
+}
+nav ul li a {
+    display: block;
+    padding: 1em 3em;
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+    font-size: 2.5vw;
+    background-image: url('images/nav-bg.png'); /* 设置底图路径 */
+    background-size: contain; /* 确保图片按比例缩放 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    background-position: center; /* 使图片在块内居中 */
+}
+
+.section {
+    padding: 2em;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 10px;
+    margin: 1em;
+}
+
+.main-visual {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 0em;
+}
+
+.main-visual img {
+    width: 100%;
+    height: auto;
+    margin-top: 0em;
+}
+
+.project-list {
+    padding: 0em;
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.project {
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.image-container img {
+    width: 100%; /* 图片占据父容器的100%宽度 */
+    height: auto; /* 维持图片的高度比例 */
+    object-fit: contain; /* 确保图片在容器内完整显示 */
+    display: block;
+}
+
+.project-title {
+    position: absolute;
+    top: 10%; /* 视口高度的10%位置 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 水平偏移，使其居中 */
+    font-size: 5vw; /* 字体大小根据视口宽度变化 */
+    text-align: center;
+    color: rgb(238, 255, 0);
+}
+
+/* 固定项目描述的位置 */
+.project-description {
+    position: absolute;
+    top: 30%; /* 视口高度的30%位置 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 水平偏移，使其居中 */
+    width: 60%; /* 设定描述区域的宽度 */
+    font-size: 2.5vw; /* 字体大小根据视口宽度变化 */
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* 调整项目描述的两栏布局 */
+.project-description .left-column, .project-description .right-column {
+    width: 48%; /* 各占据48%的宽度，留出4%的间距 */
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+/* 根据页面高度调节字体大小 */
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 7vw; /* 当视口较小时，增大字体 */
+    }
+    .project-description {
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-title {
+        font-size: 3vw; /* 当视口较大时，减小字体 */
+    }
+    .project-description {
+        font-size: 2vw;
+    }
+}

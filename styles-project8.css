@@ -1,0 +1,384 @@
+body {
+    font-family: ABC Maxi Round Unlicensed Trial;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* 背景图片 */
+    background-size: cover; /* 背景图片覆盖整个页面 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+    background-attachment: fixed; /* 使背景图片固定不动 */
+    background-position: center; /* 背景图片居中 */
+}
+
+header {
+    position: fixed; /* 固定在页面顶部 */
+    top: 0; /* 距离顶部为0 */
+    left: 0; /* 距离左侧为0 */
+    right: 0; /* 距离右侧为0 */
+    color: rgb(238, 255, 0);
+    padding: 1em 0;
+    text-align: center;
+    z-index: 2; /* 确保导航栏在其他内容之上 */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0pt;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+}
+
+nav ul li {
+    margin: 0 15vw; /* 左右间距 */
+}
+
+nav ul li a {
+    color: rgb(192, 192, 192);
+    text-decoration: none;
+    font-size: 2.5vw; /* 使用视口宽度单位，字体大小随着窗口大小变化 */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 5vw;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1em 3em;
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+    font-size: 2.5vw;
+    background-image: url('images/nav-bg.png'); /* 设置底图路径 */
+    background-size: contain; /* 确保图片按比例缩放 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    background-position: center; /* 使图片在块内居中 */
+}
+
+section {
+    background: trans;
+    padding: 2em;
+    text-align: center;
+    font-size: 2em;
+}
+
+.main-visual {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.main-visual img {
+    width: 100%;
+    height: auto;
+}
+
+#portfolio .gallery img {
+    width: 30%;
+    max-width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+/* Lightbox 样式 */
+.lightbox img {
+    max-width: 100%;
+    transition: transform 0.25s ease;
+}
+
+.lightbox img:hover {
+    transform: scale(1.01);
+}
+
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-modal img {
+    position: absolute;
+    max-width: 95%;
+    max-height: 95%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.lightbox-modal .nav-arrow {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    user-select: none;
+    z-index: 1000; /* 增加 z-index */
+}
+
+
+.lightbox-modal .nav-arrow.left {
+    left: 20px;
+}
+
+.lightbox-modal .nav-arrow.right {
+    right: 20px;
+}
+
+
+section {
+    padding: 2em;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 10px;
+    margin: 1em;
+}
+
+section {
+    padding: 0em;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 1em;
+}
+
+.project-list {
+    padding: 0em;
+    margin: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.project {
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-slider-container {
+    padding: 0em;
+    margin: 0em;
+    position: relative;
+    background-color: transparent;
+}
+
+.image-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300%; /* 确保容器宽度为三张图片的总和 */
+}
+
+.image-slider img {
+    width: 100%; /* 每张图片占据父容器的100%宽度 */
+    height: auto;
+    flex-shrink: 0; /* 防止图片缩小 */
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-controls span {
+    background-color: transparent;
+    color: gray;
+    padding: 0.5em 0.5em;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: auto;
+}
+
+.project-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0em; /* 图片之间的间距 */
+}
+
+/* 项目描述区域的整体样式 */
+.project-description {
+    display: block;
+    font-size: 2vw; /* 字体大小根据视口宽度变化 */
+    justify-content: space-between; /* 保持两栏之间的距离 */
+    padding: 2em;
+    gap: 10em; /* 增加两栏之间的间距 */
+}
+
+/* 项目标题样式 */
+.project-title {
+    font: ABC Maxi Round Unlicensed Trial;
+    position: relative; /* 确保标题在文档流中，不覆盖其他内容 */
+    font-size: 5vw; /* 字体大小根据视口宽度变化 */
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 2em; /* 距离导航栏一定距离 */
+}
+
+/* 固定项目描述的位置 */
+.project-description {
+    position: relative; /* 确保描述区域在文档流中 */
+    width: 100%; /* 设定描述区域的宽度 */
+    margin: 0.5vw auto; /* 水平居中 */
+    font-size: 2vw; /* 字体大小根据视口宽度变化 */
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: center;
+    padding: 0em 0;
+}
+
+/* 调整项目描述的两栏布局 */
+.project-description .left-column, .project-description .right-column {
+    width: 100%; /* 各占据48%的宽度，留出4%的间距 */
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.flower {
+    color:#ffffff;
+    font-size: 2vw;
+    width: 100%; /* 各占据48%的宽度，留出4%的间距 */
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+/* 根据页面高度调节字体大小 */
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 7vw; /* 当视口较小时，增大字体 */
+    }
+    .project-description {
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-title {
+        font-size: 7vw; /* 当视口较大时，减小字体 */
+    }
+    .project-description {
+        font-size: 1.5vw;
+    }
+}
+
+/* 单张全屏图片样式 */
+.project-images img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0vw auto; /* 水平居中 */
+    margin-bottom: 0; /* 图片之间的间距 */
+}
+
+.three-column-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0; /* 可根据需要调整间距 */
+}
+
+.three-column-images .image-item {
+    flex-basis: 32.5%; /* 确保每列大约占据三分之一的宽度 */
+    text-align: center;
+}
+
+.three-column-images img {
+    width: 100%;
+    height: auto;
+}
+
+.three-column-images a:hover {
+    cursor: zoom-in; /* 恢复放大镜效果 */
+}
+
+.three-column-images .image-caption {
+    margin-top: 0vw;
+    font-size: 1.5vw;
+    color: #ffffff; /* 调整颜色 */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5vw auto;
+    display: flex;
+    justify-content: center;
+    padding: 0.5em 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0em 0;
+    position: fixed;
+    width: 0;
+    bottom: 0;
+}
