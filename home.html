@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𓇻♫𝓢𝓐𝓛𝓞𝓟𝓨-𝓟𝓐𝓡𝓚𓇻♫ - Home</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        /* 确保 main-visual 是相对定位 */
+        .main-visual {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* 设置一个合适的高度 */
+            overflow: hidden; /* 确保内容不超出边界 */
+        }
+
+        /* 主视觉图片 */
+        .main-visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="home">
+        <div class="main-visual" id="main-visual">
+            <!-- 这里将动态插入随机图片 -->
+        </div>
+    </section>
+
+    <footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // 五张主视觉图片路径
+                const images = [
+                    'images/main-visual1.gif',
+                    'images/main-visual2.gif',
+                    'images/main-visual3.png',
+                    'images/main-visual4.png',
+                    'images/main-visual5.png',
+                ];
+
+                // 随机选择一张图片作为主视觉
+                const randomIndex = Math.floor(Math.random() * images.length);
+                const selectedImage = images[randomIndex];
+
+                // 将选中的图片插入到主视觉容器中，并设置为链接
+                const mainVisual = document.getElementById('main-visual');
+                mainVisual.innerHTML = `<a href="portfolio.html"><img src="${selectedImage}" alt="主视觉图片"></a>`;
+
+            });
+        </script>
+    </footer>
+</body>
+</html>
